@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1 {
+  font-size: clamp(3rem, 2.4286rem + 1.1905vw, 3.5rem);
+  line-height: 1;
+}
+
+@layer base {
+  h2 {
+    @apply leading-9 text-[2rem];
+  }
+
+  h3 {
+    @apply leading-7 text-2xl;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-black text-primaryColor uppercase;
+  }
+
+  p {
+    @apply text-primaryLight leading-[1.625rem] text-base;
+  }
+
+  body {
+    @apply overflow-x-hidden;
+  }
+
+  img {
+    @apply rounded-xl object-cover;
+  }
+}
+
+.main-container {
+  @apply max-w-[69.375rem] xl:mx-auto;
+}
+
+.snippets {
+  @apply flex flex-col gap-6 text-center justify-center items-center md:items-start md:text-left md:justify-start max-w-xs mx-auto;
+}
+
+.btn {
+  @apply text-base font-bold leading-[1.625rem] px-3.5 py-[11px] uppercase duration-300 rounded-lg;
+}
+
+@media (min-width: 768px) {
+  .btn {
+    @apply py-4 px-[26px];
+  }
+}
+
+.icon {
+  @apply bg-accentColor w-16 h-16 rounded-2xl flex justify-center items-center;
+}
+
+.overlay:before {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.75;
+  mix-blend-mode: multiply;
+
+  @apply bg-accentColor rounded-lg;
+}
+
+.overlay {
+  position: relative;
+}

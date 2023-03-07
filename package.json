@@ -1,0 +1,11 @@
+{
+  "name": "typemaster_pre-launch",
+  "version": "1.0.0",
+  "description": "Design preview for the Typemaster pre-launch landing page  coding challenge",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "watch": "npx tailwindcss -i ./input.css -o ./css/style.css --watch"
+  },
+  "author": "",
+  "license": "ISC"
+}
